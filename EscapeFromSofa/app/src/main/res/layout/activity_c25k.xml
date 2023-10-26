@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/stateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="state"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/stateTextView"
+        app:layout_constraintStart_toStartOf="@id/stateTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/stateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stateText"
+        tools:text="state" />
+
+
+    <TextView
+        android:id="@+id/sectionTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@id/timerTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="00:00" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toTopOf="@id/totalTimeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tickTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/timerTextView"
+        app:layout_constraintStart_toEndOf="@+id/timerTextView" />
+
+    <ImageButton
+        android:id="@+id/startButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#00C55F"
+        android:src="@drawable/baseline_play_arrow_24"
+        app:layout_constraintEnd_toStartOf="@id/stopButton"
+        app:layout_constraintStart_toEndOf="@id/pauseButton"
+        app:layout_constraintTop_toBottomOf="@+id/timerTextView" />
+
+    <ImageButton
+        android:id="@+id/pauseButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#3D67FF"
+        android:src="@drawable/baseline_pause_24"
+        android:visibility="gone"
+
+        app:layout_constraintEnd_toStartOf="@id/startButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerTextView" />
+
+    <ImageButton
+        android:id="@+id/stopButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#F44336"
+        android:src="@drawable/baseline_stop_24"
+        android:visibility="gone"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/startButton"
+        app:layout_constraintTop_toBottomOf="@+id/timerTextView" />
+
+    <TextView
+        android:id="@+id/totalTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="total time"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/totalTimeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/totalTimeTextView"
+        app:layout_constraintStart_toStartOf="@id/totalTimeTextView" />
+
+    <TextView
+        android:id="@+id/totalTimeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="00:00"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/c25kProgressBar"
+        app:layout_constraintEnd_toStartOf="@id/entireTimeTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/entireTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="entire time"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/entireTimeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/entireTimeTextView"
+        app:layout_constraintStart_toStartOf="@id/entireTimeTextView" />
+
+    <TextView
+        android:id="@+id/entireTimeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="00:00"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@id/c25kProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/totalTimeTextView" />
+
+    <ProgressBar
+        android:id="@+id/c25kProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleY="20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

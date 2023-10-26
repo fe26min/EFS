@@ -13,18 +13,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val tab0 = "C25K"
-        val tab1 = "Zone2"
-        val tab2 = "Record"
-
         binding.viewPager.adapter = ViewPagerAdapter(this)
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             run {
                 tab.text = when(position) {
-                    0 -> tab0
-                    1 -> tab1
-                    else -> tab2
+                    0 -> getString(R.string.c25k_tab)
+                    1 -> getString(R.string.zone2_tab)
+                    else -> getString(R.string.record_tab)
                 }
             }
         }.attach()
