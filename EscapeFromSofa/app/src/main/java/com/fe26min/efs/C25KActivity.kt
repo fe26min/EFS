@@ -1,5 +1,6 @@
 package com.fe26min.efs
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -10,6 +11,8 @@ import com.fe26min.efs.databinding.ActivityC25kBinding
 import org.json.JSONArray
 import org.json.JSONObject
 import java.lang.Exception
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.Timer
 import kotlin.concurrent.timer
 
@@ -17,6 +20,9 @@ class C25KActivity : AppCompatActivity() {
     private lateinit var binding: ActivityC25kBinding
     private lateinit var thisWeek: JSONObject
     private lateinit var thisDay: JSONArray
+    private var week =0
+    private var day = 0
+
 
     private var entireTime = 0
     private val countdownSecond = 10
@@ -30,8 +36,8 @@ class C25KActivity : AppCompatActivity() {
         binding = ActivityC25kBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val week = intent.getIntExtra("week", 0)
-        val day = intent.getIntExtra("day", 0)
+        week = intent.getIntExtra("week", 0)
+        day = intent.getIntExtra("day", 0)
 
         Log.e("week", week.toString())
         Log.e("day", day.toString())
@@ -157,8 +163,11 @@ class C25KActivity : AppCompatActivity() {
                         // timer 정지
                         this.cancel()
                         runOnUiThread {
+                            saveData()
                             showFinishDialog()
                         }
+
+
                     }
                     else
                         e.printStackTrace()
@@ -204,4 +213,16 @@ class C25KActivity : AppCompatActivity() {
         }.show()
     }
 
+    private fun saveData() {
+        val current = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ISO_DATE
+        val formatted = current.format(formatter)
+
+        with(getSharedPreferences(C25K_HISTORY, Context.MODE_PRIVATE).edit()) {
+            putString("$week$day", formatted)
+            apply()
+        }
+        Log.e("check save data", getSharedPreferences(C25K_HISTORY, Context.MODE_PRIVATE).getString("$week$day", "NOT FOUND").toString())
+        Toast.makeText(this,"운동이 기록되었습니다.", Toast.LENGTH_SHORT).show()
+    }
 }
