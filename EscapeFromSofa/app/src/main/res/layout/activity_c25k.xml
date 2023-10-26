@@ -20,7 +20,6 @@
         android:id="@+id/stateTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:gravity="center"
         android:textSize="60dp"
         android:textStyle="bold"

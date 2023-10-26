@@ -3,4 +3,7 @@
     <string name="c25k_tab">C25K</string>
     <string name="zone2_tab">ZONE2</string>
     <string name="record_tab">RECODE</string>
+    <string name="zero_time">00:00</string>
+    <string name="zero_tick">0</string>
+    <string name="c25k_json">c25k_info.json</string>
 </resources>

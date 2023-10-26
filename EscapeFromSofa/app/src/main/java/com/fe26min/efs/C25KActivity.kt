@@ -15,10 +15,8 @@ import kotlin.concurrent.timer
 
 class C25KActivity : AppCompatActivity() {
     private lateinit var binding: ActivityC25kBinding
-    private lateinit var thisWeek : JSONObject
+    private lateinit var thisWeek: JSONObject
     private lateinit var thisDay: JSONArray
-
-
 
     private var entireTime = 0
     private val countdownSecond = 10
@@ -26,7 +24,6 @@ class C25KActivity : AppCompatActivity() {
     private var currentDeciSecond = 0
     private var currentTimerDeciSecond = 0
     private var timer: Timer? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,16 +36,15 @@ class C25KActivity : AppCompatActivity() {
         Log.e("week", week.toString())
         Log.e("day", day.toString())
 
-
-        val jsonString = assets.open("c25k_info.json").reader().readText()
+        val jsonString = assets.open(getString(R.string.c25k_json)).reader().readText()
 
         val json = JSONObject(jsonString)
 
         try {
             thisWeek = json.getJSONObject("${week}")
-        } catch (e : Exception) {
+        } catch (e: Exception) {
             e.printStackTrace()
-            Toast.makeText(this,"잘못된 Week 정보입니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "잘못된 Week 정보입니다.", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
@@ -58,7 +54,7 @@ class C25KActivity : AppCompatActivity() {
 
         try {
             thisDay = thisWeek.getJSONArray("${day}")
-        } catch (e : Exception) {
+        } catch (e: Exception) {
             e.printStackTrace()
             Toast.makeText(this, "잘못된 day 정보입니다.", Toast.LENGTH_SHORT).show()
             finish()
@@ -79,7 +75,7 @@ class C25KActivity : AppCompatActivity() {
             start()
         }
         binding.stopButton.setOnClickListener {
-            showAlertDialog()
+            showStopDialog()
         }
         binding.pauseButton.setOnClickListener {
             pause()
@@ -89,8 +85,13 @@ class C25KActivity : AppCompatActivity() {
 
     private fun initViews() {
         binding.stateTextView.text = thisDay.getJSONObject(0).get("state").toString()
-        binding.entireTimeTextView.text = String.format("%02d:%02d", entireTime / 60, entireTime % 60)
-        binding.sectionTimeText.text = String.format("%02d:%02d", (thisDay.getJSONObject(0).get("time") as Int / 60),(thisDay.getJSONObject(0).get("time") as Int % 60))
+        binding.entireTimeTextView.text =
+            String.format("%02d:%02d", entireTime / 60, entireTime % 60)
+        binding.sectionTimeText.text = String.format(
+            "%02d:%02d",
+            (thisDay.getJSONObject(0).get("time") as Int / 60),
+            (thisDay.getJSONObject(0).get("time") as Int % 60)
+        )
 
         binding.c25kProgressBar.progress = 0
     }
@@ -103,9 +104,9 @@ class C25KActivity : AppCompatActivity() {
         pause()
         currentTimerDeciSecond = 0
         currentDeciSecond = 0
-        binding.totalTimeTextView.text = "00:00"
-        binding.timerTextView.text = "00:00"
-        binding.tickTextView.text = "0"
+        binding.totalTimeTextView.text = getString(R.string.zero_time)
+        binding.timerTextView.text = getString(R.string.zero_time)
+        binding.tickTextView.text = getString(R.string.zero_tick)
         initViews()
     }
 
@@ -113,7 +114,7 @@ class C25KActivity : AppCompatActivity() {
         timer?.cancel()
         timer = null
 
-        Log.e("pause",timer.toString())
+        Log.e("pause", timer.toString())
 
         binding.startButton.isVisible = true
         binding.pauseButton.isVisible = false
@@ -136,14 +137,31 @@ class C25KActivity : AppCompatActivity() {
             val second = currentDeciSecond.div(10) % 60
             val deciSeconds = currentDeciSecond % 10
 
-            if(currentTimerDeciSecond.div(10) == time) {
-                Log.e("start", timer.toString())
+            if (currentTimerDeciSecond.div(10) == time) {
+//                Log.e("start", timer.toString())
                 currentTimerDeciSecond = 0
                 idx++
-                time = thisDay.getJSONObject(idx).get("time")
-                runOnUiThread {
-                    binding.stateTextView.text = thisDay.getJSONObject(idx).get("state").toString()
-                    binding.sectionTimeText.text = String.format("%02d:%02d", (time as Int / 60),(time as Int % 60))
+                Log.e("idx", idx.toString())
+
+                // 운동이 끝이 났다.
+                try {
+                    time = thisDay.getJSONObject(idx).get("time")
+                    runOnUiThread {
+                        binding.stateTextView.text =
+                            thisDay.getJSONObject(idx).get("state").toString()
+                        binding.sectionTimeText.text =
+                            String.format("%02d:%02d", (time as Int / 60), (time as Int % 60))
+                    }
+                } catch (e: Exception) {
+                    if(idx== thisDay.length()) {
+                        // timer 정지
+                        this.cancel()
+                        runOnUiThread {
+                            showFinishDialog()
+                        }
+                    }
+                    else
+                        e.printStackTrace()
                 }
             }
 
@@ -156,23 +174,34 @@ class C25KActivity : AppCompatActivity() {
                 binding.tickTextView.text = deciSeconds.toString()
                 binding.timerTextView.text =
                     String.format("%02d:%02d", timerMinutes, timerSecond)
-                Log.e("progress", "${currentDeciSecond}")
-                Log.e("progress", "${currentDeciSecond.div(10)}")
-                Log.e("progress", "${currentDeciSecond.div(10) / 100}")
-                binding.c25kProgressBar.progress = ((currentDeciSecond / (entireTime * 10f)) * 100).toInt()
+//                Log.e("progress", "${currentDeciSecond}")
+//                Log.e("progress", "${currentDeciSecond.div(10)}")
+//                Log.e("progress", "${currentDeciSecond.div(10) / 100}")
+                binding.c25kProgressBar.progress =
+                    ((currentDeciSecond / (entireTime * 10f)) * 100).toInt()
             }
         }
 
     }
-    private fun showAlertDialog() {
+
+    private fun showStopDialog() {
         AlertDialog.Builder(this).apply {
             setMessage("종료하시겠습니까?")
-            setPositiveButton("네") {_, _ ->
+            setPositiveButton("네") { _, _ ->
                 stop()
             }
             setNegativeButton("아니오", null)
         }.show()
     }
 
+    private fun showFinishDialog() {
+        AlertDialog.Builder(this).apply {
+            setMessage("운동이 끝났습니다. 종료하시겠습니까?")
+            setPositiveButton("네") { _, _ ->
+                finish()
+            }
+            setNegativeButton("아니오", null)
+        }.show()
+    }
 
 }

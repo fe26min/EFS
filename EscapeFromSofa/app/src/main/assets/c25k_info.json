@@ -1943,75 +1943,19 @@
     "3": [
       {
         "state": "Warm-Up",
-        "time": 5
+        "time": 2
       },
       {
         "state": "Run",
-        "time": 5
+        "time": 2
       },
       {
         "state": "Walk",
-        "time": 5
-      },
-      {
-        "state": "Run",
-        "time": 5
-      },
-      {
-        "state": "Walk",
-        "time": 5
-      },
-      {
-        "state": "Run",
-        "time": 5
-      },
-      {
-        "state": "Walk",
-        "time": 5
-      },
-      {
-        "state": "Run",
-        "time": 5
-      },
-      {
-        "state": "Walk",
-        "time": 5
-      },
-      {
-        "state": "Run",
-        "time": 5
-      },
-      {
-        "state": "Walk",
-        "time": 5
-      },
-      {
-        "state": "Run",
-        "time": 5
-      },
-      {
-        "state": "Walk",
-        "time": 5
-      },
-      {
-        "state": "Run",
-        "time": 5
-      },
-      {
-        "state": "Walk",
-        "time": 5
-      },
-      {
-        "state": "Run",
-        "time": 5
-      },
-      {
-        "state": "Walk",
-        "time": 5
+        "time": 2
       },
       {
         "state": "Cool-Down",
-        "time": 5
+        "time": 1
       }
     ]
   }
