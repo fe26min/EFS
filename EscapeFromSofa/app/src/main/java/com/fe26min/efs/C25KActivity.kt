@@ -2,18 +2,23 @@ package com.fe26min.efs
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.fe26min.efs.databinding.ActivityC25kBinding
 import org.json.JSONArray
 import org.json.JSONObject
+import java.lang.Exception
 import java.util.Timer
 import kotlin.concurrent.timer
 
 class C25KActivity : AppCompatActivity() {
     private lateinit var binding: ActivityC25kBinding
+    private lateinit var thisWeek : JSONObject
     private lateinit var thisDay: JSONArray
+
+
 
     private var entireTime = 0
     private val countdownSecond = 10
@@ -35,16 +40,30 @@ class C25KActivity : AppCompatActivity() {
         Log.e("day", day.toString())
 
 
-
         val jsonString = assets.open("c25k_info.json").reader().readText()
 
         val json = JSONObject(jsonString)
 
-        val thisWeek = json.getJSONObject("${week}")
+        try {
+            thisWeek = json.getJSONObject("${week}")
+        } catch (e : Exception) {
+            e.printStackTrace()
+            Toast.makeText(this,"잘못된 Week 정보입니다.", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+
 
         Log.e("thisWeek", thisWeek.toString())
 
-        thisDay = thisWeek.getJSONArray("${day}")
+        try {
+            thisDay = thisWeek.getJSONArray("${day}")
+        } catch (e : Exception) {
+            e.printStackTrace()
+            Toast.makeText(this, "잘못된 day 정보입니다.", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
         Log.e("thisDay", thisDay.toString())
 
         for (i in 0..<thisDay.length()) {
