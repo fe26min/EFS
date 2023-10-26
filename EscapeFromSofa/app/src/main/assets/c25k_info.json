@@ -231,67 +231,51 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
         "time": 90
       },
       {
-        "state": "Run",
-        "time": 60
-      },
-      {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Cool-Down",
@@ -305,67 +289,51 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
         "time": 90
       },
       {
-        "state": "Run",
-        "time": 60
-      },
-      {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Cool-Down",
@@ -379,67 +347,51 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 90
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
         "time": 90
       },
       {
-        "state": "Run",
-        "time": 60
-      },
-      {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Cool-Down",
@@ -455,67 +407,43 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 120
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 120
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 120
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 120
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 120
       },
       {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Cool-Down",
@@ -529,67 +457,35 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 150
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 150
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 150
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 150
       },
       {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Cool-Down",
@@ -603,67 +499,35 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 150
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 150
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 150
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 150
       },
       {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Cool-Down",
@@ -679,67 +543,35 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 180
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 180
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 180
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 180
       },
       {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Cool-Down",
@@ -753,67 +585,35 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 180
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 180
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 180
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 180
       },
       {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Cool-Down",
@@ -827,67 +627,27 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 240
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 240
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 240
       },
       {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 150
       },
       {
         "state": "Cool-Down",
@@ -903,67 +663,27 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 300
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 300
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 300
       },
       {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 120
       },
       {
         "state": "Cool-Down",
@@ -977,67 +697,15 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 480
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 300
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 480
       },
       {
         "state": "Cool-Down",
@@ -1051,67 +719,7 @@
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 1200
       },
       {
         "state": "Cool-Down",
@@ -1127,67 +735,19 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 360
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 180
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 360
       },
       {
         "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 180
       },
       {
         "state": "Cool-Down",
@@ -1201,67 +761,15 @@
       },
       {
         "state": "Run",
-        "time": 60
+        "time": 600
       },
       {
         "state": "Walk",
-        "time": 90
+        "time": 180
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 600
       },
       {
         "state": "Cool-Down",
@@ -1275,67 +783,7 @@
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 1500
       },
       {
         "state": "Cool-Down",
@@ -1351,67 +799,7 @@
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 1500
       },
       {
         "state": "Cool-Down",
@@ -1425,67 +813,7 @@
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 1500
       },
       {
         "state": "Cool-Down",
@@ -1499,67 +827,7 @@
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 1500
       },
       {
         "state": "Cool-Down",
@@ -1575,67 +843,7 @@
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 1800
       },
       {
         "state": "Cool-Down",
@@ -1649,67 +857,7 @@
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 1800
       },
       {
         "state": "Cool-Down",
@@ -1723,239 +871,11 @@
       },
       {
         "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
+        "time": 1800
       },
       {
         "state": "Cool-Down",
         "time": 300
-      }
-    ]
-  },
-  "9": {
-    "1": [
-      {
-        "state": "Warm-Up",
-        "time": 300
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Cool-Down",
-        "time": 300
-      }
-    ],
-    "2": [
-      {
-        "state": "Warm-Up",
-        "time": 300
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Run",
-        "time": 60
-      },
-      {
-        "state": "Walk",
-        "time": 90
-      },
-      {
-        "state": "Cool-Down",
-        "time": 300
-      }
-    ],
-    "3": [
-      {
-        "state": "Warm-Up",
-        "time": 2
-      },
-      {
-        "state": "Run",
-        "time": 2
-      },
-      {
-        "state": "Walk",
-        "time": 2
-      },
-      {
-        "state": "Cool-Down",
-        "time": 1
       }
     ]
   }

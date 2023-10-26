@@ -61,9 +61,6 @@ class C25kFragment : Fragment(), View.OnClickListener {
         binding.w8d2.setOnClickListener(this)
         binding.w8d3.setOnClickListener(this)
 
-        binding.w9d1.setOnClickListener(this)
-        binding.w9d2.setOnClickListener(this)
-        binding.w9d3.setOnClickListener(this)
 
 
 //        binding.w1d1.setOnClickListener {it ->
