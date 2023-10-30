@@ -1,6 +1,9 @@
 package com.fe26min.efs
 
 import android.content.Context
+import android.graphics.Color
+import android.media.AudioManager
+import android.media.ToneGenerator
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -20,8 +23,9 @@ class C25KActivity : AppCompatActivity() {
     private lateinit var binding: ActivityC25kBinding
     private lateinit var thisWeek: JSONObject
     private lateinit var thisDay: JSONArray
-    private var week =0
+    private var week = 0
     private var day = 0
+    private var idx = 0
 
 
     private var entireTime = 0
@@ -30,7 +34,7 @@ class C25KActivity : AppCompatActivity() {
     private var currentDeciSecond = 0
     private var currentTimerDeciSecond = 0
     private var timer: Timer? = null
-
+    private var time: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityC25kBinding.inflate(layoutInflater)
@@ -54,6 +58,22 @@ class C25KActivity : AppCompatActivity() {
             finish()
             return
         }
+
+
+        Log.e(
+            "first check data",
+            getSharedPreferences(C25K_HISTORY, Context.MODE_PRIVATE).getString(
+                "$week$day",
+                "NOT FOUND"
+            ).toString()
+        )
+        Log.e(
+            "first check num data",
+            getSharedPreferences(C25K_HISTORY, Context.MODE_PRIVATE).getString(
+                "11",
+                "NOT FOUND"
+            ).toString()
+        )
 
 
         Log.e("thisWeek", thisWeek.toString())
@@ -87,8 +107,28 @@ class C25KActivity : AppCompatActivity() {
             pause()
         }
 
+        binding.leftArrow.setOnClickListener {
+            if(timer != null && idx != 0) {
+                idx--;
+                updateState(timer)
+            }
+        }
+
+        binding.rightArrow.setOnClickListener {
+            if(timer != null && idx < thisDay.length()) {
+                Log.e("timer", "${timer}")
+                idx++;
+                updateState(timer)
+            }
+        }
+
     }
 
+    override fun onBackPressed() {
+        if(timer == null)
+            super.onBackPressed()
+        showFinishDialog("온동 기록이 종료가 됩니다")
+    }
     private fun initViews() {
         binding.stateTextView.text = thisDay.getJSONObject(0).get("state").toString()
         binding.entireTimeTextView.text =
@@ -127,8 +167,9 @@ class C25KActivity : AppCompatActivity() {
     }
 
     private fun start() {
-        var idx = 0
-        var time = thisDay.getJSONObject(idx).get("time")
+        idx = 0
+        time = thisDay.getJSONObject(idx).get("time") as Int
+        binding.leftArrow.setColorFilter(Color.GRAY);
         binding.stateTextView.text = thisDay.getJSONObject(idx).get("state").toString()
         binding.startButton.isVisible = false
         binding.stopButton.isVisible = true
@@ -143,35 +184,17 @@ class C25KActivity : AppCompatActivity() {
             val second = currentDeciSecond.div(10) % 60
             val deciSeconds = currentDeciSecond % 10
 
-            if (currentTimerDeciSecond.div(10) == time) {
+            if (currentTimerDeciSecond.div(10) >= time as Int) {
 //                Log.e("start", timer.toString())
-                currentTimerDeciSecond = 0
                 idx++
+
+                // 다음으로 넘어간 것을 소리로 알림
+                val toneType = ToneGenerator.TONE_CDMA_HIGH_L
+                ToneGenerator(AudioManager.STREAM_ALARM, 50)
+                    .startTone(toneType, 300)
                 Log.e("idx", idx.toString())
+                updateState(timer)
 
-                // 운동이 끝이 났다.
-                try {
-                    time = thisDay.getJSONObject(idx).get("time")
-                    runOnUiThread {
-                        binding.stateTextView.text =
-                            thisDay.getJSONObject(idx).get("state").toString()
-                        binding.sectionTimeText.text =
-                            String.format("%02d:%02d", (time as Int / 60), (time as Int % 60))
-                    }
-                } catch (e: Exception) {
-                    if(idx== thisDay.length()) {
-                        // timer 정지
-                        this.cancel()
-                        runOnUiThread {
-                            saveData()
-                            showFinishDialog()
-                        }
-
-
-                    }
-                    else
-                        e.printStackTrace()
-                }
             }
 
             val timerMinutes = currentTimerDeciSecond.div(10) / 60
@@ -193,6 +216,52 @@ class C25KActivity : AppCompatActivity() {
 
     }
 
+    private fun updateState(timerTask: Timer?) {
+        Log.e("length idx", "${thisDay.length()} ${idx}")
+        if (idx == 0) {
+            binding.leftArrow.setColorFilter(Color.GRAY);
+            binding.leftArrow.isClickable = false
+        }
+        else {
+            binding.leftArrow.setColorFilter(Color.BLACK);
+            binding.leftArrow.isClickable = true
+
+        }
+
+        if (idx == thisDay.length()) {
+            // timer 정지
+            timerTask?.cancel()
+            timer = null
+
+            runOnUiThread {
+                saveData()
+                showFinishDialog("운동이 끝났습니다")
+            }
+            return
+        }
+
+        if(idx == thisDay.length() - 1) {
+            binding.rightArrow.setColorFilter(Color.GRAY);
+            binding.rightArrow.isClickable = false
+        }
+        else {
+            binding.rightArrow.setColorFilter(Color.BLACK);
+            binding.rightArrow.isClickable = true
+        }
+
+        currentTimerDeciSecond = 0
+        time = thisDay.getJSONObject(idx).get("time") as Int
+
+        runOnUiThread {
+            binding.stateTextView.text =
+                thisDay.getJSONObject(idx).get("state").toString()
+            binding.sectionTimeText.text =
+                String.format("%02d:%02d", (time as Int / 60), (time as Int % 60))
+        }
+        return
+    }
+
+
     private fun showStopDialog() {
         AlertDialog.Builder(this).apply {
             setMessage("종료하시겠습니까?")
@@ -203,9 +272,9 @@ class C25KActivity : AppCompatActivity() {
         }.show()
     }
 
-    private fun showFinishDialog() {
+    private fun showFinishDialog(message : String) {
         AlertDialog.Builder(this).apply {
-            setMessage("운동이 끝났습니다. 종료하시겠습니까?")
+            setMessage("$message, 종료하시겠습니까?")
             setPositiveButton("네") { _, _ ->
                 finish()
             }
@@ -222,7 +291,14 @@ class C25KActivity : AppCompatActivity() {
             putString("$week$day", formatted)
             apply()
         }
-        Log.e("check save data", getSharedPreferences(C25K_HISTORY, Context.MODE_PRIVATE).getString("$week$day", "NOT FOUND").toString())
-        Toast.makeText(this,"운동이 기록되었습니다.", Toast.LENGTH_SHORT).show()
+        Log.e("check key", "$week$day")
+        Log.e(
+            "check save data",
+            getSharedPreferences(C25K_HISTORY, Context.MODE_PRIVATE).getString(
+                "$week$day",
+                "NOT FOUND"
+            ).toString()
+        )
+        Toast.makeText(this, "운동이 기록되었습니다.", Toast.LENGTH_SHORT).show()
     }
 }

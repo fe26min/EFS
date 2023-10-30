@@ -28,7 +28,24 @@
         app:layout_constraintTop_toBottomOf="@+id/stateText"
         tools:text="state" />
 
-
+    <ImageView
+        android:id="@+id/leftArrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_keyboard_arrow_left_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/stateTextView"
+        app:layout_constraintBottom_toBottomOf="@id/stateTextView"
+        />
+    <ImageView
+        android:id="@+id/rightArrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_keyboard_arrow_right_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/stateTextView"
+        app:layout_constraintBottom_toBottomOf="@id/stateTextView"
+        />
     <TextView
         android:id="@+id/sectionTimeText"
         android:layout_width="wrap_content"

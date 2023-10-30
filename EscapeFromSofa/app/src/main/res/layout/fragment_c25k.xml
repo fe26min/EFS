@@ -19,16 +19,16 @@
 
         <TableRow android:layout_weight="1">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w1d1"
                 android:text="Week1\nDay1"
                 style="@style/c25kBtn"/>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w1d2"
                 android:text="Week1\nDay2"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w1d3"
                 android:text="Week1\nDay3"
                 style="@style/c25kBtn"/>
@@ -36,17 +36,17 @@
 
         <TableRow android:layout_weight="1">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w2d1"
                 android:text="Week2\nDay1"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w2d2"
                 android:text="Week2\nDay2"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w2d3"
                 android:text="Week2\nDay3"
                 style="@style/c25kBtn"/>
@@ -54,17 +54,17 @@
 
         <TableRow android:layout_weight="1">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w3d1"
                 android:text="Week3\nDay1"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w3d2"
                 android:text="Week3\nDay2"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w3d3"
                 android:text="Week3\nDay3"
                 style="@style/c25kBtn"/>
@@ -72,17 +72,17 @@
 
         <TableRow android:layout_weight="1">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w4d1"
                 android:text="Week4\nDay1"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w4d2"
                 android:text="Week4\nDay2"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w4d3"
                 android:text="Week4\nDay3"
                 style="@style/c25kBtn"/>
@@ -90,17 +90,17 @@
 
         <TableRow android:layout_weight="1">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w5d1"
                 android:text="Week5\nDay1"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w5d2"
                 android:text="Week5\nDay2"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w5d3"
                 android:text="Week5\nDay3"
                 style="@style/c25kBtn"/>
@@ -108,17 +108,17 @@
 
         <TableRow android:layout_weight="1">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w6d1"
                 android:text="Week6\nDay1"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w6d2"
                 android:text="Week6\nDay2"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w6d3"
                 android:text="Week6\nDay3"
                 style="@style/c25kBtn"/>
@@ -126,17 +126,17 @@
 
         <TableRow android:layout_weight="1">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w7d1"
                 android:text="Week7\nDay1"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w7d2"
                 android:text="Week7\nDay2"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w7d3"
                 android:text="Week7\nDay3"
                 style="@style/c25kBtn"/>
@@ -144,17 +144,17 @@
 
         <TableRow android:layout_weight="1">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w8d1"
                 android:text="Week8\nDay1"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w8d2"
                 android:text="Week8\nDay2"
                 style="@style/c25kBtn"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/w8d3"
                 android:text="Week8\nDay3"
                 style="@style/c25kBtn"/>
