@@ -221,11 +221,11 @@ class C25KActivity : AppCompatActivity() {
         if (idx == 0) {
             binding.leftArrow.setColorFilter(Color.GRAY);
             binding.leftArrow.isClickable = false
+            binding.runLottie.speed = 0.4F
         }
         else {
             binding.leftArrow.setColorFilter(Color.BLACK);
             binding.leftArrow.isClickable = true
-
         }
 
         if (idx == thisDay.length()) {
@@ -243,18 +243,25 @@ class C25KActivity : AppCompatActivity() {
         if(idx == thisDay.length() - 1) {
             binding.rightArrow.setColorFilter(Color.GRAY);
             binding.rightArrow.isClickable = false
+            binding.runLottie.speed = 0.4F
         }
         else {
             binding.rightArrow.setColorFilter(Color.BLACK);
             binding.rightArrow.isClickable = true
         }
 
+        val state = thisDay.getJSONObject(idx).get("state").toString()
+
+        if(state.equals("Run"))
+            binding.runLottie.speed = 1.4F
+        else if(state.equals("Walk"))
+            binding.runLottie.speed = 0.7F
+
         currentTimerDeciSecond = 0
         time = thisDay.getJSONObject(idx).get("time") as Int
 
         runOnUiThread {
-            binding.stateTextView.text =
-                thisDay.getJSONObject(idx).get("state").toString()
+            binding.stateTextView.text = state
             binding.sectionTimeText.text =
                 String.format("%02d:%02d", (time as Int / 60), (time as Int % 60))
         }

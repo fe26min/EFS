@@ -39,7 +39,6 @@ class C25kFragment : Fragment(), View.OnClickListener {
         binding = FragmentC25kBinding.inflate(inflater)
 
         // 버튼 등록 -> 커스텀 버튼 클래스로 코드 줄일 수 있는지 확인
-
         if(sharedPref?.contains("11") == true)
             binding.w1d1.setBackgroundColor(Color.LTGRAY)
         if(sharedPref?.contains("12") == true)

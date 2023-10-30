@@ -71,7 +71,7 @@
       },
       {
         "state": "Cool-Down",
-        "time": 10
+        "time": 300
       }
     ],
     "2": [
