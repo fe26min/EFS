@@ -41,6 +41,9 @@
         android:layout_marginTop="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:tabSelectedTextColor="#51B2FF"
+        app:tabIndicatorColor="#51B2FF"
+        app:tabTextAppearance="@style/tab_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoLinear" />

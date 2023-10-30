@@ -127,7 +127,8 @@ class C25KActivity : AppCompatActivity() {
     override fun onBackPressed() {
         if(timer == null)
             super.onBackPressed()
-        showFinishDialog("온동 기록이 종료가 됩니다")
+        else
+            showFinishDialog("온동 기록이 종료가 됩니다")
     }
     private fun initViews() {
         binding.stateTextView.text = thisDay.getJSONObject(0).get("state").toString()
