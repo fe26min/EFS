@@ -109,16 +109,23 @@ class C25KActivity : AppCompatActivity() {
         }
 
         binding.leftArrow.setOnClickListener {
-            if(timer != null && idx != 0) {
-
+            if (timer != null && idx != 0) {
+                Log.e("B currentProgressSecond", "${currentProgressSecond}")
+                Log.e("progressMinusTime", "${thisDay.getJSONObject(idx).get("time") as Int}")
                 idx--;
+                currentProgressSecond -= thisDay.getJSONObject(idx).get("time") as Int
+                Log.e("A currentProgressSecond", "${currentProgressSecond}")
                 updateState(timer)
             }
         }
 
         binding.rightArrow.setOnClickListener {
-            if(timer != null && idx < thisDay.length()) {
-                Log.e("timer", "${timer}")
+            if (timer != null && idx < thisDay.length()) {
+//                Log.e("timer", "${timer}")
+                Log.e("B currentProgressSecond", "${currentProgressSecond}")
+                Log.e("progressMinusTime", "${thisDay.getJSONObject(idx).get("time") as Int}")
+                currentProgressSecond += thisDay.getJSONObject(idx).get("time") as Int
+                Log.e("A currentProgressSecond", "${currentProgressSecond}")
                 idx++;
                 updateState(timer)
             }
@@ -127,11 +134,12 @@ class C25KActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if(timer == null)
+        if (timer == null)
             super.onBackPressed()
         else
             showFinishDialog("온동 기록이 종료가 됩니다")
     }
+
     private fun initViews() {
         binding.stateTextView.text = thisDay.getJSONObject(0).get("state").toString()
         binding.entireTimeTextView.text =
@@ -176,7 +184,7 @@ class C25KActivity : AppCompatActivity() {
         binding.pauseButton.isVisible = true
 
         timer = timer(initialDelay = 0, period = 100) {
-            Log.e("Timer this", this.toString())
+//            Log.e("Timer this", this.toString())
             currentDeciSecond += 1
             currentTimerDeciSecond += 1
 
@@ -209,8 +217,19 @@ class C25KActivity : AppCompatActivity() {
 //                Log.e("progress", "${currentDeciSecond}")
 //                Log.e("progress", "${currentDeciSecond.div(10)}")
 //                Log.e("progress", "${currentDeciSecond.div(10) / 100}")
+//                Log.e("progress", "${currentDeciSecond}")
+//                Log.e("progress", "${(currentProgressSecond + currentTimerDeciSecond).div(10)}")
+//                Log.e(
+//                    "progress",
+//                    "${((currentProgressSecond + currentTimerDeciSecond) / (entireTime * 10f) * 100).toInt()}"
+//                )
+                // 전체 시간 프로그래스바
+//                binding.c25kProgressBar.progress =
+//                    ((currentDeciSecond / (entireTime * 10f)) * 100).toInt()
+
+                // 각 구간 별 프로그래스바
                 binding.c25kProgressBar.progress =
-                    ((currentProgressSecond + currentTimerDeciSecond.div(10) % 60 / (entireTime * 10f)) * 100).toInt()
+                    ((currentProgressSecond + currentTimerDeciSecond.div(10)) / (entireTime * 1f) * 100).toInt()
             }
         }
 
@@ -222,8 +241,7 @@ class C25KActivity : AppCompatActivity() {
             binding.leftArrow.setColorFilter(Color.GRAY);
             binding.leftArrow.isClickable = false
             binding.runLottie.speed = 0.4F
-        }
-        else {
+        } else {
             binding.leftArrow.setColorFilter(Color.BLACK);
             binding.leftArrow.isClickable = true
         }
@@ -239,21 +257,20 @@ class C25KActivity : AppCompatActivity() {
             return
         }
 
-        if(idx == thisDay.length() - 1) {
+        if (idx == thisDay.length() - 1) {
             binding.rightArrow.setColorFilter(Color.GRAY);
             binding.rightArrow.isClickable = false
             binding.runLottie.speed = 0.4F
-        }
-        else {
+        } else {
             binding.rightArrow.setColorFilter(Color.BLACK);
             binding.rightArrow.isClickable = true
         }
 
         val state = thisDay.getJSONObject(idx).get("state").toString()
 
-        if(state.equals("Run"))
+        if (state.equals("Run"))
             binding.runLottie.speed = 1.4F
-        else if(state.equals("Walk"))
+        else if (state.equals("Walk"))
             binding.runLottie.speed = 0.7F
 
         currentTimerDeciSecond = 0
@@ -277,7 +294,7 @@ class C25KActivity : AppCompatActivity() {
         }.show()
     }
 
-    private fun showFinishDialog(message : String) {
+    private fun showFinishDialog(message: String) {
         AlertDialog.Builder(this).apply {
             setMessage("$message, 종료하시겠습니까?")
             setPositiveButton("네") { _, _ ->
