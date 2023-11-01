@@ -1,4 +1,4 @@
-package com.fe26min.efs
+package com.fe26min.efs.Zone2
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.fe26min.efs
+package com.fe26min.efs.Util
 
 const val C25K_INFORMATION = "c25kInfo"
 

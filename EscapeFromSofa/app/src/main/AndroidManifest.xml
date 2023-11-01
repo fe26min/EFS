@@ -25,7 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".C25KActivity"/>
+        <activity android:name=".C25K.C25KActivity"/>
     </application>
 
 </manifest>

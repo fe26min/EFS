@@ -2,6 +2,7 @@ package com.fe26min.efs
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.fe26min.efs.C25K.C25kFragment
 
 class ViewPagerAdapter(private val mainActivity: MainActivity) : FragmentStateAdapter(mainActivity) {
 
