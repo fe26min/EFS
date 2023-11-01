@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:width="108dp"
-        android:height="108dp"
-        android:drawable="@drawable/baseline_directions_run_24"
-        android:gravity="center" />
-<!--    <item-->
-<!--        android:width="108dp"-->
-<!--        android:height="108dp"-->
-<!--        android:drawable="@drawable/baseline_chair_24"-->
-<!--        android:gravity="left" />-->
-</layer-list>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="300dp"
+    android:viewportWidth="2000"
+    android:viewportHeight="2000">
+    <group android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:translateX="900.2"
+        android:translateY="450.2">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="m216,800 l-56,-56 384,-384L440,360v80h-80v-160h233q16,0 31,6t26,17l120,119q27,27 66,42t84,16v80q-62,0 -112.5,-19T718,484l-40,-42 -88,88 90,90 -262,151 -40,-69 172,-99 -68,-68 -266,265ZM120,520v-80h200v80L120,520ZM40,400v-80h200v80L40,400ZM779,320q-33,0 -57,-23.5T698,240q0,-33 24,-56.5t57,-23.5q33,0 57,23.5t24,56.5q0,33 -24,56.5T779,320ZM120,280v-80h200v80L120,280Z"/>
+    </group>
+
+    <group android:scaleX="32.0"
+        android:scaleY="32.0"
+        android:translateX="100.0"
+        android:translateY="550.2">
+        <path android:fillColor="@android:color/white" android:pathData="M7,11v2h10v-2c0,-1.86 1.28,-3.41 3,-3.86V6c0,-1.65 -1.35,-3 -3,-3H7C5.35,3 4,4.35 4,6v1.14C5.72,7.59 7,9.14 7,11z"/>
+        <path android:fillColor="@android:color/white" android:pathData="M21,9c-1.1,0 -2,0.9 -2,2v4H5v-4c0,-1.1 -0.9,-2 -2,-2s-2,0.9 -2,2v5c0,1.65 1.35,3 3,3v1c0,0.55 0.45,1 1,1c0.55,0 1,-0.45 1,-1v-1h12v1c0,0.55 0.45,1 1,1c0.55,0 1,-0.45 1,-1v-1c1.65,0 3,-1.35 3,-3v-5C23,9.9 22.1,9 21,9z"/>
+    </group>
+</vector>

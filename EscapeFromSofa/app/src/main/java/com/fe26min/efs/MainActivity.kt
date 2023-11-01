@@ -20,9 +20,10 @@ class MainActivity : AppCompatActivity() {
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             run {
                 tab.text = when(position) {
-                    0 -> getString(R.string.c25k_tab)
-                    1 -> getString(R.string.zone2_tab)
-                    else -> getString(R.string.record_tab)
+//                    0 -> getString(R.string.c25k_tab)
+//                    1 -> getString(R.string.zone2_tab)
+//                    else -> getString(R.string.record_tab)
+                    else -> "C25K"
                 }
             }
         }.attach()

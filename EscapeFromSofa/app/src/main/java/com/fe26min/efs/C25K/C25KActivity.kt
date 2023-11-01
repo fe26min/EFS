@@ -1,4 +1,4 @@
-package com.fe26min.efs
+package com.fe26min.efs.C25K
 
 import android.content.Context
 import android.graphics.Color
@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import com.fe26min.efs.Util.C25K_HISTORY
+import com.fe26min.efs.R
 import com.fe26min.efs.databinding.ActivityC25kBinding
 import org.json.JSONArray
 import org.json.JSONObject
