@@ -8,14 +8,15 @@
     android:padding="8dp"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:id="@+id/logoLinear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@id/tabLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="10dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="40dp"
@@ -36,17 +37,67 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/baseline_wb_sunny_24"
+        app:layout_constraintBottom_toBottomOf="@+id/currentTemperature"
+        app:layout_constraintEnd_toStartOf="@id/currentTemperature"
+        app:layout_constraintTop_toTopOf="@id/currentTemperature" />
+
+    <TextView
+        android:id="@+id/maxTemperature"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:textColor="#E8C1C1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="최고 온도 ℃" />
+
+    <TextView
+        android:id="@+id/minTemperature"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="#DBE1FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/maxTemperature"
+        tools:text="최저 온도 ℃" />
+
+    <TextView
+        android:id="@+id/currentTemperature"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/maxTemperature"
+        app:layout_constraintTop_toTopOf="@id/maxTemperature"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/minTemperature"
+        tools:text="현재 온도 ℃" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_marginTop="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:tabSelectedTextColor="#51B2FF"
-        app:tabIndicatorColor="#51B2FF"
-        app:tabTextAppearance="@style/tab_text"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logoLinear" />
+        app:layout_constraintTop_toBottomOf="@id/logoLinear"
+        app:tabIndicatorColor="#51B2FF"
+        app:tabSelectedTextColor="#51B2FF"
+        app:tabTextAppearance="@style/tab_text" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
