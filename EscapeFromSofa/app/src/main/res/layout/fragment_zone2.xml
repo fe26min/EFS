@@ -2,27 +2,81 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView
-        android:id="@+id/tabName"
+
+    <CalendarView
+        android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Zone2"
-        android:textSize="50dp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         />
 
     <TextView
-        android:gravity="center"
-        android:layout_width="wrap_content"
+        android:id="@+id/bestScoreTextView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="심박수 측정이 되고 만약 기준 목표 심박수가 아니면 alert\n 심박수 측정 기능 \n 심박수 설정 기능"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabName"/>
+        app:layout_constraintTop_toBottomOf="@id/calendarView"
+        android:text="ZONE2 RECORD"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#2196F3"
+        android:textSize="30dp"/>
+
+    <ListView
+        android:id="@+id/scoreListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bestScoreTextView"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/baseline_add_24"
+        app:maxImageSize="50dp"
+        android:backgroundTint="#2196F3"
+        />
+
+    <TextView
+        android:id="@+id/notFoundTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/scoreListView"
+        app:layout_constraintBottom_toBottomOf="@id/scoreListView"
+        android:text="기록이 없습니다"
+        android:textColor="#454545"
+        android:textSize="20dp"
+        android:gravity="bottom|center"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/notFoundLottie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/scoreListView"
+        app:layout_constraintBottom_toBottomOf="@id/scoreListView"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/not_found_animation"
+        app:lottie_speed="1"
+        android:visibility="gone"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

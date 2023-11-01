@@ -32,6 +32,7 @@ class C25KActivity : AppCompatActivity() {
     private val countdownSecond = 10
     private var currentCountDownDeciSecond = countdownSecond * 10
     private var currentDeciSecond = 0
+    private var currentProgressSecond = 0
     private var currentTimerDeciSecond = 0
     private var timer: Timer? = null
     private var time: Int = 0
@@ -43,8 +44,8 @@ class C25KActivity : AppCompatActivity() {
         week = intent.getIntExtra("week", 0)
         day = intent.getIntExtra("day", 0)
 
-        Log.e("week", week.toString())
-        Log.e("day", day.toString())
+//        Log.e("week", week.toString())
+//        Log.e("day", day.toString())
 
         val jsonString = assets.open(getString(R.string.c25k_json)).reader().readText()
 
@@ -60,20 +61,20 @@ class C25KActivity : AppCompatActivity() {
         }
 
 
-        Log.e(
-            "first check data",
-            getSharedPreferences(C25K_HISTORY, Context.MODE_PRIVATE).getString(
-                "$week$day",
-                "NOT FOUND"
-            ).toString()
-        )
-        Log.e(
-            "first check num data",
-            getSharedPreferences(C25K_HISTORY, Context.MODE_PRIVATE).getString(
-                "11",
-                "NOT FOUND"
-            ).toString()
-        )
+//        Log.e(
+//            "first check data",
+//            getSharedPreferences(C25K_HISTORY, Context.MODE_PRIVATE).getString(
+//                "$week$day",
+//                "NOT FOUND"
+//            ).toString()
+//        )
+//        Log.e(
+//            "first check num data",
+//            getSharedPreferences(C25K_HISTORY, Context.MODE_PRIVATE).getString(
+//                "11",
+//                "NOT FOUND"
+//            ).toString()
+//        )
 
 
         Log.e("thisWeek", thisWeek.toString())
@@ -109,6 +110,7 @@ class C25KActivity : AppCompatActivity() {
 
         binding.leftArrow.setOnClickListener {
             if(timer != null && idx != 0) {
+
                 idx--;
                 updateState(timer)
             }
@@ -144,11 +146,11 @@ class C25KActivity : AppCompatActivity() {
     }
 
     private fun stop() {
+        finishTimer()
+
         binding.stopButton.isVisible = false
         binding.pauseButton.isVisible = false
         binding.startButton.isVisible = true
-
-        pause()
         currentTimerDeciSecond = 0
         currentDeciSecond = 0
         binding.totalTimeTextView.text = getString(R.string.zero_time)
@@ -158,10 +160,7 @@ class C25KActivity : AppCompatActivity() {
     }
 
     private fun pause() {
-        timer?.cancel()
-        timer = null
-
-        Log.e("pause", timer.toString())
+        finishTimer()
 
         binding.startButton.isVisible = true
         binding.pauseButton.isVisible = false
@@ -177,7 +176,7 @@ class C25KActivity : AppCompatActivity() {
         binding.pauseButton.isVisible = true
 
         timer = timer(initialDelay = 0, period = 100) {
-
+            Log.e("Timer this", this.toString())
             currentDeciSecond += 1
             currentTimerDeciSecond += 1
 
@@ -211,7 +210,7 @@ class C25KActivity : AppCompatActivity() {
 //                Log.e("progress", "${currentDeciSecond.div(10)}")
 //                Log.e("progress", "${currentDeciSecond.div(10) / 100}")
                 binding.c25kProgressBar.progress =
-                    ((currentDeciSecond / (entireTime * 10f)) * 100).toInt()
+                    ((currentProgressSecond + currentTimerDeciSecond.div(10) % 60 / (entireTime * 10f)) * 100).toInt()
             }
         }
 
@@ -231,8 +230,7 @@ class C25KActivity : AppCompatActivity() {
 
         if (idx == thisDay.length()) {
             // timer 정지
-            timerTask?.cancel()
-            timer = null
+            finishTimer()
 
             runOnUiThread {
                 saveData()
@@ -269,7 +267,6 @@ class C25KActivity : AppCompatActivity() {
         return
     }
 
-
     private fun showStopDialog() {
         AlertDialog.Builder(this).apply {
             setMessage("종료하시겠습니까?")
@@ -284,6 +281,7 @@ class C25KActivity : AppCompatActivity() {
         AlertDialog.Builder(this).apply {
             setMessage("$message, 종료하시겠습니까?")
             setPositiveButton("네") { _, _ ->
+                finishTimer()
                 finish()
             }
             setNegativeButton("아니오", null)
@@ -308,5 +306,10 @@ class C25KActivity : AppCompatActivity() {
             ).toString()
         )
         Toast.makeText(this, "운동이 기록되었습니다.", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun finishTimer() {
+        timer?.cancel()
+        timer = null
     }
 }
