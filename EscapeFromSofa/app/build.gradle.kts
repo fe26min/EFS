@@ -46,6 +46,7 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
+    implementation("androidx.core:core-splashscreen:1.0.1")
     implementation ("com.google.code.gson:gson:2.8.6")
     implementation ("com.airbnb.android:lottie:5.2.0")
 
